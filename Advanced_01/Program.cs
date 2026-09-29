@@ -28,6 +28,16 @@
     }
     #endregion
 
+    #region  Q5: FindMax
+    static T FindMax<T>(T[] items) where T : IComparable<T>
+        // Generic doesn't allow for comparison so that we write where T : IComparable<T>
+    {
+        T max = items[0];
+        foreach (var item in items)
+            if (item.CompareTo(max) > 0) max = item;
+        return max;
+    }
+    #endregion
     public static void Main(string [] args)
     {
         #region Q1: Generic class
