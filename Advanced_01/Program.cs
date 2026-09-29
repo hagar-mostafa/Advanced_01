@@ -56,6 +56,13 @@
     class costrain_Struct<T> where T : struct { public T Value; }
     // costrain_Struct<int> OK, costrain_Struct<string> error
     #endregion
+
+    #region Q8: class constraint
+    //T must be a reference type.
+    class Class_Constrains<T> where T : class { public T? Item; }
+    // Class_Constrains<string> OK, Class_Constrains<int> error
+    #endregion
+
     public static void Main(string [] args)
     {
         #region Q1: Generic class
@@ -65,6 +72,7 @@ A class with a type placeholder (T) that is replaced by a real type when used, l
 Why use generics: type safety at compile time, code reuse, no casting, and no boxing (better performance).
          */
         #endregion
+
 
    
     }
