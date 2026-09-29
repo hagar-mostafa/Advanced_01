@@ -51,6 +51,11 @@
     // all this methodes will be impelemented in another class , it's only the signature
     #endregion
 
+    #region Q7: struct constraint
+    //T must be a non-nullable value type.
+    class costrain_Struct<T> where T : struct { public T Value; }
+    // costrain_Struct<int> OK, costrain_Struct<string> error
+    #endregion
     public static void Main(string [] args)
     {
         #region Q1: Generic class
