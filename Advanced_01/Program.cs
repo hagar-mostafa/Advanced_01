@@ -38,6 +38,19 @@
         return max;
     }
     #endregion
+
+    #region Q6: Generic interface and IRepository
+    // An interface with a type parameter.
+    interface IRepository<T>
+    {
+        void Add(T item);
+        void Remove(T item);
+        T GetById(int id);
+        IEnumerable<T> GetAll();
+    }
+    // all this methodes will be impelemented in another class , it's only the signature
+    #endregion
+
     public static void Main(string [] args)
     {
         #region Q1: Generic class
