@@ -67,6 +67,12 @@
     //T must have a public parameterless constructor.
     static T Create<T>() where T : new() => new T();
     #endregion
+
+    #region Q10: Interface constraint
+    //T must implement the interface.
+    interface IShape { double Area(); }
+    static double GetArea<T>(T shape) where T : IShape => shape.Area();
+    #endregion
     public static void Main(string [] args)
     {
         #region Q1: Generic class
