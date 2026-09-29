@@ -63,6 +63,10 @@
     // Class_Constrains<string> OK, Class_Constrains<int> error
     #endregion
 
+    #region Q9: new() constraint
+    //T must have a public parameterless constructor.
+    static T Create<T>() where T : new() => new T();
+    #endregion
     public static void Main(string [] args)
     {
         #region Q1: Generic class
